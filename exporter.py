@@ -1,11 +1,21 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+""" Small script to export Deezer playlists to CSV files
+
+    Author: Corentin Chauvin-Hameau
+    Date: 2020
+    License: The Unlicense
+"""
+
 import requests
 import tkinter as tk
 from tkinter import filedialog
 
 
+#*************************
+#**  Playlist loading  ***
+#*************************
 def load_playlist(playlist_id):
     STATUS_OK = 200
     base_url = "https://api.deezer.com/playlist/"
@@ -41,7 +51,9 @@ def load_playlist(playlist_id):
 
     return data, s
 
-# GUI callbacks
+#**********************
+#**  GUI callbacks  ***
+#**********************
 tracks_string = None
 
 def load_cb():
