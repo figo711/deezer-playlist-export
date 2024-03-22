@@ -77,7 +77,7 @@ def save_cb():
     print("f", filename)
 
     if filename is not None:
-        f = open(filename, 'w+')
+        f = open(filename, 'w+', encoding='utf-8')
         f.write(tracks_string)
         f.close()
 
